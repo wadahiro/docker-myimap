@@ -1,0 +1,17 @@
+# directory for log
+#set logfile "/var/log/fetchmail.log"
+
+# destination for fetchmail error
+set postmaster root
+set no bouncemail
+
+defaults
+        keep
+        no mimedecode
+
+poll @FETCH_SERVER@
+        protocol @FETCH_PROTOCOL@
+        user @FETCH_USER@
+        password @FETCH_PASSWORD@
+        mda "/usr/libexec/dovecot/deliver"
+
