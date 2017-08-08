@@ -24,6 +24,7 @@ COPY 10-mail.conf /etc/dovecot/conf.d/
 COPY 10-master.conf /etc/dovecot/conf.d/
 COPY 15-lda.conf /etc/dovecot/conf.d/
 COPY 20-managesieve.conf /etc/dovecot/conf.d/
+COPY 90-plugin.conf /etc/dovecot/conf.d/
 COPY 90-sieve.conf /etc/dovecot/conf.d/
 
 
