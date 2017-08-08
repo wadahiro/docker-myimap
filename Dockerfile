@@ -12,8 +12,9 @@ ENV IMAP_USER=myimap
 ENV IMAP_PASSWORD=password
 
 ENV FETCH_INTERVAL=30
+ENV FETCH_ENABLED=false
 
-COPY docker-entrypoint.sh fetchmail.sh /usr/local/bin/
+COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/*.sh
 
 COPY fetchmailrc.tmpl /root/
