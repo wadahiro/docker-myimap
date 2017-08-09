@@ -19,7 +19,7 @@ chmod 700 /var/lib/mail/.fetchmailrc
 
 # run fetchmail as daemon
 if [ "$FETCH_ENABLED" = "true" ]; then
-    su $IMAP_USER -s /bin/sh -c fetchmail -d $FETCH_INTERVAL
+    su $IMAP_USER -s /bin/sh -c "fetchmail -d $FETCH_INTERVAL"
 fi
 
 # run dovecot as forground
